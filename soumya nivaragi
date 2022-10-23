@@ -1,0 +1,142 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNDqZCs32ayFaB9qG4frWjX",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/soumyanivaragi/dayone_/blob/main/soumya%20nivaragi\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 31,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "WvkQ8rFEIPRo",
+        "outputId": "0f424759-059e-4298-94ed-59428f7ad6a4"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number6\n",
+            "Factorial of  6  is 720\n"
+          ]
+        }
+      ],
+      "source": [
+        "\n",
+        "def factorial(a):\n",
+        "    fact=1\n",
+        "    for p in range(a,0,-1):\n",
+        "        fact=fact*p\n",
+        "    return fact\n",
+        "\n",
+        "n=int(input(\"Enter a number\"))\n",
+        "res=factorial(n)\n",
+        "print(\"Factorial of \",n,\" is\",res)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def recursive_fibonacci(n):\n",
+        "  if n <= 1:\n",
+        "      return n\n",
+        "  else:\n",
+        "      return(recursive_fibonacci(n-1) + recursive_fibonacci(n-2))\n",
+        " \n",
+        "n_terms = 10\n",
+        " \n",
+        "# check if the number of terms is valid\n",
+        "if n_terms <= 0:\n",
+        "  print(\"Invalid input ! Please input a positive value\")\n",
+        "else:\n",
+        "  print(\"Fibonacci series:\")\n",
+        "for i in range(n_terms):\n",
+        "    print(recursive_fibonacci(i))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Lg6MG1AU-b29",
+        "outputId": "bc84f383-0776-46cd-808a-33665ffcf06c"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Fibonacci series:\n",
+            "0\n",
+            "1\n",
+            "1\n",
+            "2\n",
+            "3\n",
+            "5\n",
+            "8\n",
+            "13\n",
+            "21\n",
+            "34\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "n= int(input(\"enter the number of rows:\"))\n",
+        "for i in range(n):\n",
+        "   for j in range(n-i-1):\n",
+        "      print(\" \",end=\"\")\n",
+        "   for j in range(i+1):\n",
+        "      print(\"*\",end=\"\")\n",
+        "   print()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "VvjFsmmTJ9h4",
+        "outputId": "e69cee4c-dc26-421a-d7ce-ea5a1a39a8bb"
+      },
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter the number of rows:3\n",
+            "  *\n",
+            " **\n",
+            "***\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
